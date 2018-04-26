@@ -11,11 +11,12 @@ const int powerPin = A1;
 
 int threshold = 200;
 
-void push(){
-    servo2.write(-65);
+void push(){ 
     delay(300);
     servo2.write(65);
-}
+    servo2.write(-65);
+    Serial.println("pushed"); 
+}  
 
 void setup() {
   BTSerial.begin(9600); 
